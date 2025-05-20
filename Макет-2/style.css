@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input, ::placeholder {
+  font-family: "Inter";
+}
+
+#modalBtn, #tourModalBtn {
+  margin-top: 10%;
+  margin-left: 45%;
+  font-size: 20px;
+  background: linear-gradient(92deg, rgba(174, 95, 255, 0.50) 0%, rgba(174, 95, 255, 0.50) 0.01%, rgba(174, 95, 255, 0.50) 0.02%, rgba(107, 30, 255, 0.50) 106.32%);
+  color: rgb(255, 255, 255);
+  padding: 15px 15px;
+  border: 0px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 16, 61, 0.48);
+  z-index: 1000;
+}
+
+.modal {
+  -webkit-box-shadow: 9px 8px 21px 1px rgba(131, 80, 197, 0.329);
+  -moz-box-shadow: 9px 8px 21px 1px rgba(98, 26, 126, 0.397);
+  box-shadow: 9px 8px 21px 1px rgba(39, 19, 150, 0.2);
+  position: relative;
+  padding: 32px;
+  background: #fff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 0px 24px 0px 24px;
+  background: linear-gradient(92deg, rgba(174, 95, 255, 0.50) 0%, rgba(174, 95, 255, 0.50) 0.01%, rgba(174, 95, 255, 0.50) 0.02%, rgba(107, 30, 255, 0.50) 106.32%);
+  cursor: pointer;
+}
+
+.modal__title {
+  text-align: center;
+  color: #2C2D2E;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.switcher {
+  display: flex;
+  width: 100%;
+  background: rgba(0, 16, 61, 0.06);
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.switch {
+  padding: 16px 50px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+}
+
+.active-switch {
+  background: #fff;
+  border: 1px solid #AE5FFF;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+label {
+  color: #919399;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 16, 61, 0.12);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.form-input::placeholder {
+  font-size: 14px;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.phone-flag {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+select {
+  width: 30%;
+  padding: 15px 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 16, 61, 0.12);
+  font-size: 14px;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.phone {
+  width: 70%;
+  padding: 15px 16px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 16, 61, 0.12);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  font-size: 16px;
+  font-family: "Inter", Bold;
+  font-weight: 600;
+  color: white;
+  border: 0px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(150deg, #AE5FFF, #6B1EFF);
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 16, 61, 0.12);
+}
+
+.divider-text {
+  padding: 0 10px;
+  color: #919399;
+  font-size: 12px;
+}
+
+.login-form, .register-form, .tour-form {
+  display: none;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-wrapper input {
+  margin-right: 10px;
+}
+
+.checkbox-wrapper label {
+  margin: 0;
+  color: #2C2D2E;
+  font-size: 14px;
+}
+
+.contact-methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-method {
+  padding: 1px 11px;
+  border: 2px solid rgb(197, 197, 197);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-method.selected {
+  padding: 1px 10px;
+  border: 2px solid rgb(189, 189, 189);
+  border-width: 3px;
+  border-style: double;
+  background-color: #005BD1;
+}
+.contact-text {
+  margin-top: 2.5px;
+}
+

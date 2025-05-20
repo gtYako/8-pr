@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/oathanrex/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="btns">
+       <button id="login">Войти</button>
+    <button id="commentbtn">Оставить комментарий</button>  
+    </div>
+ 
+
+    <div class="modal-wrapper" id="loginModal">
+      <div class="modal">
+        <i class="fa-solid fa-xmark close" id="closeModal"></i>
+        <form action="#">
+          <p class="modal__title">Вход</p>
+          <label for="phone">Телефон</label> <br>
+          <input class="phone__input" type="tel" placeholder="Введите телефон" id="phone" />
+          <button type="submit" class="submit">Вход</button>
+          <div class="form-bottom">
+            <a href="#" class="register">Регистрация</a>
+            <a href="#" class="forgot-password">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-wrapper" id="commentModal">
+      <div class="modal modalComment">
+        <p class="modal__title">Комментарии</p>
+        <i class="fa-solid fa-xmark close" id="closeComment"></i>
+        <div class="comments">
+          <div class="comment">
+            <p class="author">Дмитрий (курьер) 21.01.2021</p>
+            <p class="comment__text">У клиента были гнилые половина помидоров. Он сказал возьмет их. Надо возместить бонусами.</p>
+          </div>
+          <div class="comment">
+            <p class="author">Аня (менеджер) 22.02.2021</p>
+            <p class="comment__text">Созвонились с клиентом. Я начислила 50 балов.</p>
+          </div>
+        </div>
+        <textarea type="text" class="comment__input"></textarea>
+        <button class="submit" type="submit">Отправить</button>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модальные окна</title>
+  <link href="https://cdn.jsdelivr.net/gh/oathanrex/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="modalBtn">Модальное окно</button>
+  <button id="tourModalBtn">Подобрать тур</button>
+  
+  <!-- Окно авторизации/регистрации -->
+  <div class="modal-wrapper" id="modalWrapper">
+    <div class="modal">
+      <i class="fa-solid fa-xmark close" id="closeModal"></i>
+      
+      <!-- Login Form -->
+      <div class="login-form" id="loginForm">
+        <p class="modal__title">Авторизация</p>
+        <div class="switcher">
+          <p class="switch active-switch" data-form="login">Авторизация</p>
+          <p class="switch" data-form="register">Регистрация</p>
+        </div>
+        <form action="#">
+          <label for="loginEmail">E-mail</label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="arimovrenat@@gmail.com">
+          
+          <label for="loginPhone">Номер телефона</label>
+          <div class="phone-wrapper">
+
+            <select name="first-digit">
+              <option value="1">+7</option>
+              <option value="2">+6</option>
+              <option value="3">+5</option>
+            </select>
+            <input type="text" id="loginPhone" class="phone" placeholder="___ ___-__-__">
+          </div>
+          <button type="submit" class="submit-btn">Войти</button>
+          
+          <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-text">ИЛИ</div>
+            <div class="divider-line"></div>
+          </div>
+          <img src="./img/google.png" alt="">
+          <img src="./img/apple.png" alt="">
+          <img src="./img/yandex.png" alt="">
+        </form>
+      </div>
+      
+      <!-- Register Form -->
+      <div class="register-form" id="registerForm">
+        <p class="modal__title">Регистрация</p>
+        <div class="switcher">
+          <p class="switch" data-form="login">Авторизация</p>
+          <p class="switch active-switch" data-form="register">Регистрация</p>
+        </div>
+        <form action="#">
+          <label for="registerPhone">Номер телефона</label>
+          <div class="phone-wrapper">
+            <select name="first-digit">
+              <option value="1">+7</option>
+              <option value="2">+6</option>
+              <option value="3">+5</option>
+            </select>
+            <input type="text" id="registerPhone" class="phone" placeholder="___ ___-__-__">
+          </div>
+          
+          <label for="registerEmail">E-mail</label>
+          <input type="email" id="registerEmail" class="form-input" placeholder="arimovrenat@@gmail.com">
+          
+          <label for="registerPassword">Пароль</label>
+          <input type="password" id="registerPassword" class="form-input" placeholder="Придумайте пароль">
+          
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="agreeTerms" checked>
+            <label for="agreeTerms">Согласен с политикой обработки персональных данных и пользовательским соглашением</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">Зарегистрироваться</button>
+          <div class="divider">
+            <div class="divider-line"></div>
+            <div class="divider-text">ИЛИ</div>
+            <div class="divider-line"></div>
+          </div>
+          <img src="./img/google.png" alt="">
+          <img src="./img/apple.png" alt="">
+          <img src="./img/yandex.png" alt="">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Окно подбора тура -->
+  <div class="modal-wrapper" id="tourModalWrapper">
+    <div class="modal">
+      <i class="fa-solid fa-xmark close" id="closeTourModal"></i>
+      
+      <div class="tour-form" id="tourForm">
+        <p class="modal__title">Мы поможем подобрать тур</p>
+        <form action="#">
+          <label for="fromCity">Откуда</label>
+          <input type="text" id="fromCity" class="form-input" placeholder="Москва">
+          
+          <label for="toCity">Куда</label>
+          <input type="text" id="toCity" class="form-input" placeholder="">
+          
+          <label for="startDate">Дата начала</label>
+          <input type="text" id="startDate" class="form-input" placeholder="12/12/2020">
+          
+          <label for="userName">Имя</label>
+          <input type="text" id="userName" class="form-input" placeholder="">
+          
+          <label for="userEmail">E-mail</label>
+          <input type="email" id="userEmail" class="form-input" placeholder="">
+          
+          <label for="userPhone">Номер телефона</label>
+          <div class="phone-wrapper">
+
+            <select name="first-digit">
+              <option value="1">+7</option>
+              <option value="2">+6</option>
+              <option value="3">+5</option>
+            </select>
+            <input type="text" id="userPhone" class="phone" placeholder="___ ___-__-__">
+          </div>
+          
+          <label>Желаемый способ связи</label>
+          <div class="contact-methods">
+            <div class="contact-method selected"><br></div>
+            <div class="contact-text">Телефон</div>
+            <div class="contact-method"><br></div>
+            <div class="contact-text">WhatsApp</div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+ <script src="main.js"></script>
+</body>
+</html>
